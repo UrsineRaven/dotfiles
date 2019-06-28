@@ -53,10 +53,8 @@ ls () {
 		for f in ${FILES[*]}
 		do
 			if [ -f "${f}/.hidden" ]; then # Read the .hidden file, if present, and generate the -I flags
-				while read l; do
-					IGNORE[$I]="-I $l"
-					((I++))
-				done <"${f}/.hidden"
+				IGNORE[$I]=$(awk '{print "-I " $0}' "${f}/.hidden" | tr "\n" " ")
+				((I++))
 			fi
 		done
 		command ls ${DEFAULT_ARGS} ${ARGS[*]} ${IGNORE[*]} ${FILES[*]}
