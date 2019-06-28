@@ -17,7 +17,9 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Files in .hidden files are ignored by ls
 # NOTES: Not tolerant of empty lines (or lines with only whitespace)
-#        If any argument doesn't begin with a '-', this assumes it's a file argument
+#	 If any argument doesn't begin with a '-', this assumes it's a file argument
+#	 If you pass multiple folders, it will essentially concatenate the .hidden files and ignore all files matching any of those names (so if you have a file name TEST in two folders, but only have TEST in the .hidden file of one folder, calling ls on both folders won't show either TEST file)
+#	 It does honor the -a flag
 ls () {
 	DEFAULT_ARGS="--color=auto"
 	ALL=false
