@@ -38,7 +38,7 @@ fi
 # My additions ############################################
 
 #setbg & 	# Set the background
-#sxhkd & 	# Bind keys
+sxhkd & 	# Bind keys
 #xcompmgr & 	# For transparency support
 #dunst &	# For desktop notifications
 exec i3

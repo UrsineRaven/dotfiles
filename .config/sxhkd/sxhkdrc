@@ -1,0 +1,5 @@
+# Configuration for sxhkd (Super X HotKey Daemon)
+
+#super + g	# Open site where Grip (https://github.com/joeyespo/grip) hosts Markdown previews
+shift + F1	# Temp shortcut for use on virtual machine (since it's not capturing the super key properly and I'm too lazy to figure it out at the moment)
+	surf http://localhost:6419/

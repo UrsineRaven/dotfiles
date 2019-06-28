@@ -19,6 +19,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 #	 If any argument doesn't begin with a '-', this assumes it's a file argument
 #	 If you pass multiple folders, it will essentially concatenate the .hidden files and ignore all files matching any of those names (so if you have a file name TEST in two folders, but only have TEST in the .hidden file of one folder, calling ls on both folders won't show either TEST file)
 #	 It does honor the -a flag
+#	 I don't know if there's a limit on total number of flags or total command length, but if there is, this may surpass it depending on the number of file names in the .hidden file
 ls () {
 	DEFAULT_ARGS="--color=auto" # Here, because I want colors (and you can't have a function and an alias with the same name)
 	ALL=false
