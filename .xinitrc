@@ -1,4 +1,6 @@
 #!/bin/sh
+# xinit "run commands"; Defines which program(s) to run when starting the X
+# window server.
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -33,7 +35,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# My additions
+# My additions ############################################
 
 #setbg & 	# Set the background
 #sxhkd & 	# Bind keys
