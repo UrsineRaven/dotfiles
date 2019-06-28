@@ -61,3 +61,7 @@ ls () {
 		return
 	fi
 }
+
+# Script that works like a basic feed reader
+source ~/.local/bin/feed-reader.sh
+alias archnews='deef archnews'
