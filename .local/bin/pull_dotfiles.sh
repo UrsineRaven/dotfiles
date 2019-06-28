@@ -17,7 +17,7 @@ if [ $? = 0 ]; then
 else
 	echo "Backing up pre-existing dot files."
 	mkdir $HOME/.dotfiles-backup
-	dotfiles checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} sh -c 'mkdir -p "$HOME/.dotfiles-backup/$(dirname {}); mv $HOME/{} $HOME/.dotfiles-backup/{} ;'
+	dotfiles checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} sh -c 'mkdir -p "$HOME/.dotfiles-backup/$(dirname {})"; mv $HOME/{} $HOME/.dotfiles-backup/{} ;'
 	dotfiles checkout
 fi
 dotfiles config --local status.showUntrackedFiles no
