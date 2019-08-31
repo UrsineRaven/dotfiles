@@ -10,3 +10,4 @@ TODO:
 * further configure i3
 * configure i3blocks and add its dot file
 * setup script to pull news from Arch Linux website (probably 13blocks module to notify of new articles)
+* follow suggestions provided [here](https://codereview.stackexchange.com/questions/223149/remap-ls-to-honor-hidden-files/223169#223169)
